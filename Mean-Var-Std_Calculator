@@ -1,0 +1,29 @@
+import numpy as np
+"""
+The function, 'calculate', will take in a list of 9 numbers, convert those numbers into a 3x3 table, and return
+the mean, variance, standard deviation, max, min, and sum of each row, column, and of the whole data set. 
+"""
+def calculate(list):
+  if len(list) != 9:
+      raise ValueError("List must contain nine numbers.")
+
+  array = np.array(list) #turn the list into a numpy array. 
+  new_array = np.array([array[0:3],array[3:6],array[6:9]]) #turn the single array into 3 arrays. 
+  
+  mean = [np.mean(new_array,axis=0), np.mean(new_array,axis=1), np.mean(new_array)] #calculate the mean of each row, column, and entire the data set. 
+  variance = [np.var(new_array,axis=0), np.var(new_array,axis=1), np.var(new_array)]
+  std = [np.std(new_array,axis=0), np.std(new_array,axis=1), np.std (new_array)]
+  maximum = [np.max(new_array,axis=0), np.max(new_array,axis=1), np.max (new_array)]
+  minimum = [np.min(new_array,axis=0), np.min(new_array,axis=1), np.min (new_array)]
+  summ = [np.sum(new_array,axis=0), np.sum(new_array,axis=1), np.sum (new_array)]
+
+  calculations = {'mean': [mean[0].tolist(),mean[1].tolist(),mean[2].tolist()],
+                  'variance': [variance[0].tolist(),variance[1].tolist(),variance[2].tolist()],
+                  'standard deviation': [std[0].tolist(),std[1].tolist(),std[2].tolist()],
+                  'max': [maximum[0].tolist(),maximum[1].tolist(),maximum[2].tolist()],
+                  'min': [minimum[0].tolist(),minimum[1].tolist(),minimum[2].tolist()],
+                  'sum': [summ[0].tolist(),summ[1].tolist(),summ[2].tolist()]}
+
+  return calculations
+list = [1,2,3,4,5,6,7,8,9]
+print(calculate(list))
