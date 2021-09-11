@@ -1,5 +1,6 @@
 """
-This code was written as a project for Free Code Camp's data analysis course. To run this code please visit, 
+This code was written as a project for Free Code Camp's data analysis course. To run this code and view the csv file
+please visit, 
 https://replit.com/@razemnuj/boilerplate-demographic-data-analyzer#demographic_data_analyzer.py. 
 """ 
 import pandas as pd
