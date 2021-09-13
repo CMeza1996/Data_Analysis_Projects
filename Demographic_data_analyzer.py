@@ -2,6 +2,7 @@
 This code was written as a project for Free Code Camp's data analysis course. To run this code and view the csv file
 please visit, 
 https://replit.com/@razemnuj/boilerplate-demographic-data-analyzer#demographic_data_analyzer.py. 
+Please note that it takes a few seconds for the code to run on the online editor. 
 """ 
 import pandas as pd
 import numpy as np
